@@ -6,18 +6,18 @@ import "./Tasks.scss";
 
 const Tasks = () => {
   const [tasks, setTasks] = useState([
-    {
-      description: "Grocery shopping",
-      done: false,
-    },
-    {
-      description: "Do laundry",
-      done: false,
-    },
-    {
-      description: "Get bday present for Kathi",
-      done: false,
-    }
+    // {
+    //   description: "Grocery shopping",
+    //   done: false,
+    // },
+    // {
+    //   description: "Do laundry",
+    //   done: false,
+    // },
+    // {
+    //   description: "Get bday present for Kathi",
+    //   done: false,
+    // }
   ]);
 
   const toggleTask = (description) => {
@@ -45,7 +45,7 @@ const Tasks = () => {
     }
   };
 
-const deleteTask = (description) => {
+  const deleteTask = (description) => {
     const modifiedTasks = tasks.map(task => {return task});
     tasks.map((task) => {
       if (task.description == description) {
@@ -58,36 +58,15 @@ const deleteTask = (description) => {
     setTasks(modifiedTasks);
   }
 
-  // const EmptyState = () => {
-  //   return <p>Nothing here yet. Add a task now!</p>;
-  // }
+  console.log(tasks.count);
 
-  // const FullList = () => {
-  //   return (
-  //     {tasks.map((task, index) => (
-  //       <Task
-  //         description={task.description}
-  //         done={task.done}
-  //         key={index}
-  //         toggleTask={toggleTask}
-  //       />
-  //     ))}
-  //   );
-  // }
-
-  // const TaskCheck = () => {
-  //   if (tasks.count == 0) {
-  //     return <EmptyState />;
-  //   }
-  //   return <FullList />;
-  // }
 
   return (
     <div className="tasks-container">
       <div className="tasks">
         <h1 className="tasks-headline">My tasks 🗒</h1>
         <NewTask addNewTask={addNewTask} />
-        <h2 className="tasks-subheadline">Today</h2>
+        <h2 className="tasks-subheadline">{tasks.length > 0 ? 'Today' : ''}</h2>
         <div className="tasks-list">
           {tasks.map((task, index) => (
             <Task

@@ -1,0 +1,16 @@
+.tasks {
+  width: 100%;
+  
+  &-container {
+    margin: 0 auto;
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &-headline {
+    font-weight: bold;
+  }
+}

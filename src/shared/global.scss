@@ -1,0 +1,13 @@
+/* font styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  color: $dark;
+  font-family: 'Roboto', sans-serif;
+  background-color: $bg;
+}
+
+h1, h2, p {
+  margin: 0;
+}

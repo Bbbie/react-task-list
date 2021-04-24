@@ -58,15 +58,12 @@ const Tasks = () => {
     setTasks(modifiedTasks);
   }
 
-  console.log(tasks.count);
-
-
   return (
     <div className="tasks-container">
       <div className="tasks">
         <h1 className="tasks-headline">My tasks 🗒</h1>
         <NewTask addNewTask={addNewTask} />
-        <h2 className="tasks-subheadline">{tasks.length > 0 ? 'Today' : ''}</h2>
+        { tasks.length > 0 ? <h2 className="tasks-subheadline">Today</h2> : ""}
         <div className="tasks-list">
           {tasks.map((task, index) => (
             <Task

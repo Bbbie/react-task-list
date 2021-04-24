@@ -7,15 +7,15 @@ import "./Tasks.scss";
 const Tasks = () => {
   const [tasks, setTasks] = useState([
     {
-      description: "Klo putzen",
+      description: "Grocery shopping",
       done: false,
     },
     {
-      description: "Waesche waschen",
+      description: "Do laundry",
       done: false,
     },
     {
-      description: "Sekt reinstellen",
+      description: "Get bday present for Kathi",
       done: false,
     }
   ]);
@@ -86,10 +86,8 @@ const deleteTask = (description) => {
     <div className="tasks-container">
       <div className="tasks">
         <h1 className="tasks-headline">My tasks 🗒</h1>
-        <h2>New task</h2>
         <NewTask addNewTask={addNewTask} />
-        <h2>My tasks</h2>
-
+        <h2 className="tasks-subheadline">Today</h2>
         <div className="tasks-list">
           {tasks.map((task, index) => (
             <Task

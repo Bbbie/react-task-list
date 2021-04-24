@@ -20,22 +20,21 @@ const NewTask = ({ addNewTask }) => {
   };
 
   return (
-    <div className="new-task-container">
-      <form className="new-task-form">
-        <input
-          type="text"
-          className="new-task-description"
-          onChange={changeHandler}
-        />
-        <button
-          type="submit"
-          className="new-task-submit"
-          onClick={submitHandler}
-        >
-          Add Task
-        </button>
-      </form>
-    </div>
+    <form className="new-task-form">
+      <input
+        type="text"
+        className="new-task-description new-task-shared"
+        onChange={changeHandler}
+        placeholder='Add a description'
+      />
+      <button
+        type="submit"
+        className="new-task-submit new-task-shared"
+        onClick={submitHandler}
+      >
+        Add Task
+      </button>
+    </form>
   );
 };
 

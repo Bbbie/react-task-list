@@ -1,6 +1,5 @@
 .tasks {
   width: 100%;
-  
   &-container {
     margin: 0 auto;
     width: 500px;
@@ -11,6 +10,13 @@
     align-items: center;
   }
   &-headline {
-    font-weight: bold;
+    font-size: 34px;
+    margin-bottom: 24px;
+  }
+  &-subheadline {
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 36px;
+    margin-bottom: 20px;
   }
 }

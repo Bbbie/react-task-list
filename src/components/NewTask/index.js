@@ -4,11 +4,12 @@ import "./NewTask.scss";
 const NewTask = ({ addNewTask }) => {
   const [enteredDescription, setEnteredDescription] = useState("");
 
+  // Get input from user
   const changeHandler = (event) => {
     setEnteredDescription(event.currentTarget.value);
-    console.log(setEnteredDescription);
   };
 
+  // Add a new task object to tasks array (happens in @components/Task/index.js)
   const submitHandler = (event) => {
     event.preventDefault();
     const newTask = {

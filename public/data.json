@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "description": "Grocery shopping",
+      "done": false,
+    },
+    {
+      "description": "Do laundry",
+      "done": false,
+    },
+    {
+      "description": "Get bday present for Kathi",
+      "done": false,
+    }
+  ]
+}

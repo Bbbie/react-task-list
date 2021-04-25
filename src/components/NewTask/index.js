@@ -24,6 +24,7 @@ const NewTask = ({ addNewTask }) => {
       <input
         type="text"
         className="new-task-description new-task-shared"
+        value={enteredDescription}
         onChange={changeHandler}
         placeholder='Add a description'
       />

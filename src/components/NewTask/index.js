@@ -27,7 +27,7 @@ const NewTask = ({ addNewTask }) => {
         className="new-task-description new-task-shared"
         value={enteredDescription}
         onChange={changeHandler}
-        placeholder='Add a description'
+        placeholder='What needs to get done?'
       />
       <button
         type="submit"

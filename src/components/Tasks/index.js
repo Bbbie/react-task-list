@@ -5,6 +5,8 @@ import ls from "local-storage";
 import "./Tasks.scss";
 
 const Tasks = () => {
+  const todaysDate = new Date().toLocaleString('en-US', { month: 'long', day: '2-digit' });
+
   // Set tasks array to what is in local storage or empty, if nothing is in there
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("myTasks")) || []
@@ -63,7 +65,7 @@ const Tasks = () => {
       <div className="tasks">
         <h1 className="tasks-headline">My tasks 🗒</h1>
         <NewTask addNewTask={addNewTask} />
-        {tasks.length > 0 ? <h2 className="tasks-subheadline">Today</h2> : ""}
+        {tasks.length > 0 ? <h2 className="tasks-subheadline">Today, {todaysDate}</h2> : ""}
         <div className="tasks-list">
           {tasks.map((task, index) => (
             <Task
